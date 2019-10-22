@@ -57,12 +57,9 @@ $(".validation-wizard").steps({
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {
         var jsonData = Json.parse(xhr.responseText);
-        console.log(jsonData);
-      } else {
-        swa;
-        ("Something went wrong");
       }
     };
+
     xhr.onprogress = function() {
       var loadingWidget = document.getElementById("widgethere");
       loadingWidget.innerHTML = `
@@ -78,19 +75,22 @@ $(".validation-wizard").steps({
             </div>
       `;
     };
+
     xhr.onload = function() {
       document.getElementById("widgethere").innerHTML = "";
     };
+
     xhr.open("POST", "/patients", true);
+
     //Send the proper header information along with the request
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    // xhr.send();
+
     xhr.setRequestHeader("X-CSRF-TOKEN", token);
 
     xhr.send(
       `fullname=${fullname}&parentname=${parentname}&address=${address}&occupation=${occupation}&phonenumber=${phonenumber}&alternativephonenumber=${alternativePhonenumber}&nextofkin=${nextOfKin}&dateofbirth=${dateOfBirth}&cliniccardnumber=${cliniccardnumber}`
     );
-    // alert(document.getElementById("wcliniccardnumber").value);
+
     swal("Patient Registered Successfully!");
     location.href = "/patients";
   }
@@ -109,4 +109,8 @@ $(".validation-wizard").steps({
       error.insertAfter(element);
     },
     rules: {
-    
+      email: {
+        email: !0
+      }
+    }
+  });

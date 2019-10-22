@@ -9,7 +9,8 @@ class PatientController extends Controller
 {
     public function index()
     {
-        return view('patients.index');
+        $patients = Patient::all();
+        return view('patients.index', compact('patients'));
     }
 
     public function create()
@@ -25,13 +26,4 @@ class PatientController extends Controller
         ], 200);
     }
 
-    // public function test()
-    // {
-    //     return request()->all();
-    //     // if (request()->isXmlHttpRequest()) {
-    //     return response()->json([
-    //         'msg' => 'test'
-    //     ]);
-    //     // }
-    // }
 }
