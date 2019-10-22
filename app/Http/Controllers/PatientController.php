@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class PatientController extends Controller
 {
-    public function index()
+    public function index(Patient $patient)
     {
-        $patients = Patient::all();
+        $patients = $patient->registered();
         return view('patients.index', compact('patients'));
     }
 

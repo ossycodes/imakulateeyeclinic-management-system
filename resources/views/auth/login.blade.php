@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="http://html-templates.multipurposethemes.com/bootstrap-4/admin/minimal-elite-admin/images/favicon.ico">
 
-    <title>Minimalelite Admin - Log in </title>
+    <title>Imakulateeyeclinic - Log in </title>
   
 	<!-- Bootstrap 4.0-->
 	<link rel="stylesheet" href="assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
@@ -38,16 +38,26 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     {{-- <p class="login-box-msg">Sign in to start your session</p> --}}
-
-    <form action="../../index.html" method="post" class="form-element">
-      <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
-        <span class="ion ion-email form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
-        <span class="ion ion-locked form-control-feedback"></span>
-      </div>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+    <form action="{{ route('login') }}" method="post" class="form-element" novalidate>@csrf
+      <div class="form-group">
+          <h5> Email <span class="text-danger">*</span></h5>
+          <div class="controls">
+            <input type="email" name="email" class="form-control" required data-validation-required-message="This field is required"> </div>
+        </div>
+        <div class="form-group">
+          <h5> Password <span class="text-danger">*</span></h5>
+          <div class="controls">
+            <input type="password" name="password" class="form-control" required data-validation-required-message="This field is required"> </div>
+        </div>
       <div class="row">
         <div class="col-6">
           <div class="checkbox">
@@ -83,6 +93,15 @@
 	
 	<!-- Bootstrap 4.0-->
 	<script src="{{ asset('assets/vendor_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
+  <!-- Form validator JavaScript -->
+  <script src="{{ asset('js/pages/validation.js') }}"></script>
+  <script>
+  ! function(window, document, $) {
+      "use strict";
+    $("input").not("[type=submit]").jqBootstrapValidation();
+  }(window, document, jQuery);
+  </script>
 
 </body>
 </html>

@@ -15,8 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::post('/test', 'PatientController@test');
+
 Route::get('/login', 'Auth\LoginController@showLoginForm');
+Route::post('/login', 'Auth\LoginController@login')->name('login');
+Route::match(['GET', 'POST'], '/logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/patients/create', 'PatientController@create')->name('patients.create');
 Route::get('/patients', 'PatientController@index')->name('patients.index');

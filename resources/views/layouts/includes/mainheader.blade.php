@@ -306,7 +306,8 @@
                 </div>
             <div role="separator" class="divider col-12"></div>
                 <div class="col-12 text-left">
-                <a href="data.html#"><i class="fa fa-power-off"></i> Logout</a>
+                    
+                  <a href="{{ route('logout') }}"><i class="fa fa-power-off"></i> Logout</a>
                 </div>				
             </div>
             <!-- /.row -->

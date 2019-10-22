@@ -12,4 +12,9 @@ class Patient extends Model
     {
         return $this->create($patient);
     }
+
+    public function registered()
+    {
+        return $this->all();
+    }
 }

@@ -48,4 +48,18 @@ class PatientTest extends TestCase
             ->assertStatus(200)
             ->assertSee($patientDetails['fullname']);
     }
+
+    /** @test */
+    public function unauthenticated_admin_cannot_visit_dashboard_page()
+    {
+        $this->get('dashboard')->assertRedirect('/login');
+    }
+
+    /** @test */
+    public function authenticated_admin_can_visit_dashboard_page()
+    {
+        $admin = factory('App\User')->create();
+        $this->actingAs($admin);
+        $this->get('dashboard')->assertOk();
+    }
 }
