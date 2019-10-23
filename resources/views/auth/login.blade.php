@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="http://html-templates.multipurposethemes.com/bootstrap-4/admin/minimal-elite-admin/images/favicon.ico">
+    <link rel="icon" href="{{ asset('images/favicon.ico') }}">
 
     <title>Imakulateeyeclinic - Log in </title>
   

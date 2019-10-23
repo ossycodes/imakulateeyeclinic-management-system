@@ -38,8 +38,8 @@
               <ul class="treeview-menu">
                 <li><a href="{{ route('patients.create') }}"><i class="fa fa-circle-thin"></i>Register</a></li>
                 <li><a href="{{ route('patients.index') }}"><i class="fa fa-circle-thin"></i>Registered Patients</a></li>
+                <li><a href="{{ route('celebrants') }}"><i class="fa fa-circle-thin"></i>Celebrants</a></li>
                 {{-- <li><a href="../app/app-ticket.html"><i class="fa fa-circle-thin"></i>Support Ticket</a></li>
-                <li><a href="../app/calendar.html"><i class="fa fa-circle-thin"></i>Calendar</a></li>
                 <li><a href="../app/profile.html"><i class="fa fa-circle-thin"></i>Profile</a></li>
                 <li><a href="../app/userlist-grid.html"><i class="fa fa-circle-thin"></i>Userlist Grid</a></li>
                 <li><a href="../app/userlist.html"><i class="fa fa-circle-thin"></i>Userlist</a></li> --}}

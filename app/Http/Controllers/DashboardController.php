@@ -8,11 +8,13 @@ class DashboardController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        return $this->middleware('auth');
     }
 
     public function index()
     {
-        return view('dashboard');
+        $celebrantCount = \App\Patient::where('dateofbirth', date('Y-d-m'))->count();
+        //check for users whose birthday are today and pass the number count and details to this view
+        return view('dashboard', compact('celebrantCount'));
     }
 }

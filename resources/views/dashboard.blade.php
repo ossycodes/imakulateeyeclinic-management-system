@@ -76,13 +76,13 @@
 			</div>
 
 
-			{{-- <div class="col-sm-6 col-lg-3">
+			<div class="col-sm-6 col-lg-3">
 			  <div class="box pull-up">
 				  <div class="box-body">
 					<div class="flexbox mb-1">
 					  <div>
-						<p class="text-danger font-size-26 font-weight-300 mb-0">90.89 %</p>
-						Customer Satisfaction
+						<p class="text-danger font-size-26 font-weight-300 mb-0"><a href="{{ route('celebrants') }}">{{ $celebrantCount }}</a></p>
+						<a href="{{ route('celebrants') }}">{{ str_plural('Patient', $celebrantCount) }} Have Birthday Today</a>
 					  </div>
 					  <div class="text-danger font-size-40"><i class="mdi mdi-heart"></i></div>
 					</div>
@@ -91,7 +91,7 @@
 					</div>
 				  </div>
 			  </div>
-            </div> --}}
+            </div>
             
 		  </div>
         </div>

@@ -14,12 +14,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Registered Patients
+        Patients Who Have Birthday Today @php echo date('d-D-F-Y') @endphp
       </h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="data.html#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="breadcrumb-item"><a href="data.html#">Patients</a></li>
-        <li class="breadcrumb-item active">Registered</li>
+        <li class="breadcrumb-item active">Celebrants</li>
       </ol>
     </section>
 
@@ -30,7 +30,7 @@
          
          <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Registered Patients</h3>
+              <h3 class="box-title">Celebrants</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -38,57 +38,32 @@
 				  <table id="example1" class="table table-bordered table-striped">
 					<thead>
 						<tr>
-							<th>Clinic Card Number</th>
 							<th>Full Name</th>
-							<th>Parent Name</th>
 							<th>Address</th>
-							<th>Occupation</th>
 							<th>Phone Number</th>
-							<th>Alternative Phone Number</th>
-							<th>Next Of Kin Name</th>
-							<th>Date of Birth</th>
-							<th>Action</th>
+                            <th>Alternative Phone Number</th>
+                            <th>Date Of Birth</th>
 						</tr>
 					</thead>
 					<tbody>
-						@foreach ($patients as $patient)
+						@foreach ($celebrants as $celebrant)
 						<tr>
-							<td>{{ $patient->cliniccardnumber }}</td>
-							<td>{{ $patient->fullname }}</td>
-							<td>{{ $patient->parentname }}</td>
-							<td>{{ $patient->address }}</td>
-							<td>{{ $patient->occupation }}</td>
-							<td>{{ $patient->phonenumber }}</td>
-							<td>{{ $patient->alternativephonenumber }}</td>
-							<td>{{ $patient->nextofkin }}</td>
-							<td>{{ $patient->dateofbirth }}</td>
-							<td>
-								<a href="{{ route('patient.edit', ['patient' => $patient]) }}"class="btn btn-app bg-blue">
-									<i class="fa fa-edit"></i> Edit
-								</a>
-								
-								{{-- <button class="btn btn-app bg-purple" value="{{ $patient->id }}" id="del">Delete</button> --}}
-								{{-- <a class="btn btn-app bg-purple" id="del">
-									<i class="fa fa-inbox"></i> Delete
-								</a> --}}
-								
-							</td>
+							<td>{{ $celebrant->fullname }}</td>
+							<td>{{ $celebrant->address }}</td>
+							<td>{{ $celebrant->phonenumber }}</td>
+							<td>{{ $celebrant->alternativephonenumber }}</td>
+							<td>{{ $celebrant->dateofbirth }}</td>
 						</tr>
 						@endforeach
 					</tbody>
 					<tfoot>
-						<tr>
-							<th>Clinic Card Number</th>
-							<th>Full Name</th>
-							<th>Parent Name</th>
-							<th>Address</th>
-							<th>Occupation</th>
-							<th>Phone Number</th>
-							<th>Alternative Phone Number</th>
-							<th>Next Of Kin Name</th>
-							<th>Date of Birth</th>
-							<th>Action</th>
-						</tr>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Address</th>
+                            <th>Phone Number</th>
+                            <th>Alternative Phone Number</th>
+                            <th>Date Of Birth</th>
+                        </tr>
 					</tfoot>
 				  </table>
 				</div>
