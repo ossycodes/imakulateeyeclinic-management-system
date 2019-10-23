@@ -36,29 +36,15 @@ class PatientController extends Controller
         return view('patients.edit', compact('patient'));
     }
 
-    public function update(Patient $patient)
+    public function update(Patient $patient, Request $request)
     {
-        // dd(request()->all());
-        // $patient->update([
-        //     "fullname" => request("fullname"),
-        //     "parentname" => request("parentname"),
-        //     "address" => request("address"),
-        //     "occupation" => request("occupation"),
-        //     "phonenumber" => request("phonenumber"),
-        //     "alternativephonenumber" => request("alternativephonenumber"),
-        //     "nextofkin" => request("nextofkin"),
-        //     "dateofbirth" => request("dateofbirth"),
-        //     "cliniccardnumber" => request("cliniccardnumber"),
-        //   ]);
         $patient->updateDetails(request()->all());
-        return response()->json([
-            'status' => true
-        ]);
+        return redirect('/patients')->with('success', 'Patient Details Updated.');
     }
 
     public function destroy(Patient $patient)
     {
         $patient->delete();
-        return response()->json([], 204);
+        return redirect('/patients')->with('success', 'Patient Deleted');
     }
 }

@@ -41,29 +41,29 @@
 							<th>Full Name</th>
 							<th>Address</th>
 							<th>Phone Number</th>
-                            <th>Alternative Phone Number</th>
-                            <th>Date Of Birth</th>
+              <th>Alternative Phone Number</th>
+              <th>Date Of Birth</th>
 						</tr>
 					</thead>
 					<tbody>
-						@foreach ($celebrants as $celebrant)
-						<tr>
-							<td>{{ $celebrant->fullname }}</td>
-							<td>{{ $celebrant->address }}</td>
-							<td>{{ $celebrant->phonenumber }}</td>
-							<td>{{ $celebrant->alternativephonenumber }}</td>
-							<td>{{ $celebrant->dateofbirth }}</td>
-						</tr>
-						@endforeach
+              @foreach ($celebrants as $celebrant)
+              <tr>
+                <td>{{ $celebrant->fullname }}</td>
+                <td>{{ $celebrant->address }}</td>
+                <td>{{ $celebrant->phonenumber }}</td>
+                <td>{{ $celebrant->alternativephonenumber ?? 'Not provided' }}</td>
+                <td>{{ $celebrant->dateofbirth }}</td>
+              </tr>
+              @endforeach
 					</tbody>
 					<tfoot>
-                        <tr>
-                            <th>Full Name</th>
-                            <th>Address</th>
-                            <th>Phone Number</th>
-                            <th>Alternative Phone Number</th>
-                            <th>Date Of Birth</th>
-                        </tr>
+              <tr>
+                  <th>Full Name</th>
+                  <th>Address</th>
+                  <th>Phone Number</th>
+                  <th>Alternative Phone Number</th>
+                  <th>Date Of Birth</th>
+              </tr>
 					</tfoot>
 				  </table>
 				</div>

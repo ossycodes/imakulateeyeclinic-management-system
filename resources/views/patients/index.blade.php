@@ -25,6 +25,8 @@
 
     <!-- Main content -->
     <section class="content">
+		<!-- Flash Session Message -->
+		@include('layouts.flashmessages')
       <div class="row">
         <div class="col-12">
          
@@ -59,18 +61,17 @@
 							<td>{{ $patient->address }}</td>
 							<td>{{ $patient->occupation }}</td>
 							<td>{{ $patient->phonenumber }}</td>
-							<td>{{ $patient->alternativephonenumber }}</td>
+							<td>{{ $patient->alternativephonenumber ?? 'Not provided' }}</td>
 							<td>{{ $patient->nextofkin }}</td>
 							<td>{{ $patient->dateofbirth }}</td>
 							<td>
 								<a href="{{ route('patient.edit', ['patient' => $patient]) }}"class="btn btn-app bg-blue">
 									<i class="fa fa-edit"></i> Edit
 								</a>
-								
-								{{-- <button class="btn btn-app bg-purple" value="{{ $patient->id }}" id="del">Delete</button> --}}
-								{{-- <a class="btn btn-app bg-purple" id="del">
-									<i class="fa fa-inbox"></i> Delete
-								</a> --}}
+								<form action="{{ route('patient.destroy', ['patient' => $patient]) }}" method="post">@csrf
+									@method('DELETE')
+									<button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete</button>
+								</form>
 								
 							</td>
 						</tr>

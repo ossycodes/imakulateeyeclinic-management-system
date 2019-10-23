@@ -44,7 +44,7 @@ class SendPatientBirthdayNotification extends Command
     {
         $user = User::find(2);
         $filtered = Patient::all()->filter(function ($value, $key) {
-            return $value->dateofbirth === date('Y-d-m');
+            return $value->dateofbirth === date('d-m-Y');
         });
         $patients = $filtered->all();
         $user->notify(new HappyBirthday($patients));

@@ -9,7 +9,7 @@ class CelebrantController extends Controller
 {
     public function index()
     {
-        $celebrants = Patient::where('dateofbirth', date('Y-d-m'))->get();
+        $celebrants = Patient::where('dateofbirth', date('Y-m-d'))->get();
         return view('celebrants.index', compact('celebrants'));
     }
 }

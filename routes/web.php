@@ -24,5 +24,6 @@ Route::get('/patients/create', 'PatientController@create')->name('patients.creat
 Route::get('/patients/{patient}/edit', 'PatientController@edit')->name('patient.edit');
 Route::get('/patients', 'PatientController@index')->name('patients.index');
 Route::post('/patients', 'PatientController@store');
-Route::put('/patients/{patient}', 'PatientController@update');
+Route::patch('/patients/{patient}', 'PatientController@update')->name('patient.update');
 Route::get('/patients/celebrants', 'CelebrantController@index')->name('celebrants');
+Route::delete('/patients/{patient}', 'PatientController@destroy')->name('patient.destroy');

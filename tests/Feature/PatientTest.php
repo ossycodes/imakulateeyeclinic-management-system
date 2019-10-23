@@ -13,36 +13,16 @@ class PatientTest extends TestCase
     /** @test */
     public function admin_can_register_new_patient()
     {
-        //whip up a factory for this bruh!
-        $patientDetails = [
-            'fullname' => 'patient1',
-            'parentname' => 'test',
-            'address' => 'test',
-            'occupation' => 'occupation',
-            'phonenumber' => 'phonenumber',
-            'alternativePhonenumber' => 'alternativePhonenumber',
-            'nextOfKin' => 'nextOfKin',
-            'dateOfBirth' => '2019-08-19',
-            'cliniccardnumber' => 'shjhsjskjdkd'
-        ];
+        $this->actingAs($admin=factory('App\User')->create());
+        $patientDetails = factory('App\Patient')->raw();
         $this->postJson('/patients', $patientDetails)->assertStatus(200);
     }
 
     /** @test */
     public function admin_can_view_registered_patients()
     {
-        //whip up a factory for this bruh!
-        $patientDetails = [
-            'fullname' => 'patient1',
-            'parentname' => 'test',
-            'address' => 'test',
-            'occupation' => 'occupation',
-            'phonenumber' => 'phonenumber',
-            'alternativePhonenumber' => 'alternativePhonenumber',
-            'nextOfKin' => 'nextOfKin',
-            'dateOfBirth' => '2019-08-19',
-            'cliniccardnumber' => 'shjhsjskjdkd'
-        ];
+        $this->actingAs($admin = factory('App\User')->create());
+        $patientDetails = factory('App\Patient')->raw();
         $this->postJson('/patients', $patientDetails);
         $this->get('patients')
             ->assertStatus(200)
@@ -61,5 +41,33 @@ class PatientTest extends TestCase
         $admin = factory('App\User')->create();
         $this->actingAs($admin);
         $this->get('dashboard')->assertOk();
+    }
+
+    /** @test */
+    public function admin_can_delete_patient()
+    {
+        $this->actingAs($admin = factory('App\User')->create());
+        $patient = factory('App\Patient')->create();
+        $this->delete(route('patient.destroy', ['patient' => $patient]))
+            ->assertRedirect('/patients');
+    }
+
+    /** @test */
+    public function admin_can_update_patient_details()
+    {
+        $this->withoutExceptionHandling();
+        $this->actingAs($admin = factory('App\User')->create());
+        $patient = factory('App\Patient')->create();
+        $this->assertDatabaseHas('patients', [
+            'fullname' => $patient->fullname
+        ]);
+        $this->patch(route('patient.update', ['patient' => $patient]),  [
+            'fullname' => 'chris',
+            'cliniccardnumber' => 'shsjhsjshs12341'
+        ])->assertRedirect('/patients');
+
+        $this->assertDatabaseHas('patients', [
+            'fullname' => 'chris',
+        ]);
     }
 }
