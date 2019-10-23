@@ -35,18 +35,10 @@
   <div class="login-logo">
     {{-- <a href="#"><b>Imakulateeyeclinic</b> Admin Login</a> --}}
   </div>
-  <!-- /.login-logo -->
+
   <div class="login-box-body">
-    {{-- <p class="login-box-msg">Sign in to start your session</p> --}}
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
+      <!-- /.error-message -->
+    @include('layouts.includes.errormessages')
     <form action="{{ route('login') }}" method="post" class="form-element" novalidate>@csrf
       <div class="form-group">
           <h5> Email <span class="text-danger">*</span></h5>

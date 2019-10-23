@@ -27,3 +27,5 @@ Route::post('/patients', 'PatientController@store');
 Route::patch('/patients/{patient}', 'PatientController@update')->name('patient.update');
 Route::get('/patients/celebrants', 'CelebrantController@index')->name('celebrants');
 Route::delete('/patients/{patient}', 'PatientController@destroy')->name('patient.destroy');
+Route::get('/change-password', 'ChangePasswordController@index')->name('changepassword');
+Route::patch('/change-password', 'ChangePasswordController@update')->name('password.update');

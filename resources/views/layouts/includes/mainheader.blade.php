@@ -55,10 +55,9 @@
             <img src="../../../images/user5-128x128.jpg" class="float-left rounded-circle" alt="User Image">
 
             <p>
-                Juliya Brus
-                <small class="mb-5">xxx@gmail.com</small>
-                <a href="data.html#" class="btn btn-danger btn-sm btn-rounded">View Profile</a>
-            </p>
+                {{ auth()->user()->name }}
+                <small class="mb-5">admin@admin.com</small>
+             </p>
             </li>
             <!-- Menu Body -->
             <li class="user-body">
@@ -66,15 +65,10 @@
                 <div class="col-12 text-left">
                 <a href="data.html#"><i class="ion ion-person"></i> My Profile</a>
                 </div>
-                <div class="col-12 text-left">
-                <a href="data.html#"><i class="ion ion-email-unread"></i> Inbox</a>
-                </div>
-                <div class="col-12 text-left">
-                <a href="data.html#"><i class="ion ion-settings"></i> Setting</a>
-                </div>
+                
             <div role="separator" class="divider col-12"></div>
                 <div class="col-12 text-left">
-                <a href="data.html#"><i class="ti-settings"></i> Account Setting</a>
+                <a href="{{ route('changepassword') }}"><i class="ti-settings"></i> Change Password</a>
                 </div>
             <div role="separator" class="divider col-12"></div>
                 <div class="col-12 text-left">
