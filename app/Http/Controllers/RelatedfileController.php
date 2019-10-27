@@ -30,8 +30,11 @@ class RelatedfileController extends Controller
         return view('relatedfiles.show', compact('relatedfiles'));
     }
 
-    public function store(Patient $patient)
+    public function store(Patient $patient, Request $request)
     {
+        $request->validate([
+            'record' => 'required',
+        ], ['record.required' => 'Please enter record details for the patient']);
         $patient->createRecord(request()->all());
         return redirect()->route('relatedfiles')->with('success', 'Record Created For Patient');
     }

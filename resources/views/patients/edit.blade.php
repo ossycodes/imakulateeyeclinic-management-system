@@ -18,6 +18,11 @@
       <div class="box">
         <div class="box-header with-border">
           <h3 class="box-title">Edit Patient Details</h3>
+          <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ route('dashbaord') }}"><i class="fa fa-dashboard"></i>dashboard</a></li>
+                <li class="breadcrumb-item active"><a href="{{ route('patients.index') }}">patients</a></li>
+                <li class="breadcrumb-item active">Registered</li>
+          </ol>
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
             <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>

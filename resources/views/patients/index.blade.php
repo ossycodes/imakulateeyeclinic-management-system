@@ -17,8 +17,7 @@
         Registered Patients
       </h1>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="data.html#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="breadcrumb-item"><a href="data.html#">Patients</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('dashbaord') }}"> <i class="fa fa-dashboard"> </i> dashboard </a></li>
         <li class="breadcrumb-item active">Registered</li>
       </ol>
     </section>

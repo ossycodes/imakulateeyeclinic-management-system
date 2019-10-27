@@ -2,15 +2,18 @@
 <!-- Logo -->
 <a href="#" class="logo">
     <!-- mini logo -->
-    <b class="logo-mini">
-        <span class="light-logo"><img src="{{ asset('images/logo-light.png') }}" alt="logo"></span>
-        <span class="dark-logo"><img src="{{ asset('images/logo-dark.png') }}" alt="logo"></span>
-    </b>
+    <h6 class="logo-mini">
+        {{-- <span class="light-logo"><img src="{{ asset('images/logo-light.png') }}" alt="logo"></span>
+        <span class="dark-logo"><img src="{{ asset('images/logo-dark.png') }}" alt="logo"></span> --}}
+        <p>IMAKULATEEYECLINIC</p>
+    </h6>
     <!-- logo-->
-    <span class="logo-lg">
-        <img src="{{ asset('images/logo-light-text.png') }}" alt="logo" class="light-logo">
-        <img src="{{ asset('images/logo-dark-text.png') }}" alt="logo" class="dark-logo">
-    </span>
+    
+    <h6 class="logo-lg">
+        {{-- <p>I.C</p> --}}
+        {{-- <img src="{{ asset('images/logo-light-text.png') }}" alt="logo" class="light-logo">
+        <img src="{{ asset('images/logo-dark-text.png') }}" alt="logo" class="dark-logo"> --}}
+    </h6>
 </a>
 <!-- Header Navbar -->
 <nav class="navbar navbar-static-top">
@@ -24,7 +27,9 @@
         <!-- Notifications -->
         <li class="dropdown notifications-menu">
         <a href="data.html#" class="dropdown-toggle" data-toggle="dropdown">
+            {{-- @if($notificationCount) --}}
             <i class="mdi mdi-bell"></i>
+            {{-- @endif --}}
         </a>
         <ul class="dropdown-menu scale-up">
             <li class="header">You have @php echo count(auth()->user()->unreadNotifications) @endphp notifications</li>
@@ -40,31 +45,34 @@
                     @endforeach
             </ul>
             </li>
-            <li class="footer"><a href="data.html#">View all</a></li>
+            @if($notificationCount)
+                <li class="footer"><a href="{{ route('notification.markasread') }}">Mark as read</a></li>
+            @endif
         </ul>
         </li>
 
         <!-- User Account-->
         <li class="dropdown user user-menu">
         <a href="data.html#" class="dropdown-toggle" data-toggle="dropdown">
-            <img src="../../../images/user5-128x128.jpg" class="user-image rounded-circle" alt="User Image">
+            <i class="fa fa-user-circle"></i>
         </a>
         <ul class="dropdown-menu scale-up">
             <!-- User image -->
             <li class="user-header">
-            <img src="../../../images/user5-128x128.jpg" class="float-left rounded-circle" alt="User Image">
-
-            <p>
-                {{ auth()->user()->name }}
-                <small class="mb-5">admin@admin.com</small>
-             </p>
+            <img src="../../../images/user5-1.jpg" class="float-left rounded-circle" alt="User Image">
+            @if(auth()->check())
+                <p>
+                    {{ auth()->user()->name }}
+                    <small class="mb-5">{{ auth()->user()->email }}</small>
+                </p>
+             @endif
             </li>
             <!-- Menu Body -->
             <li class="user-body">
             <div class="row no-gutters">
-                <div class="col-12 text-left">
+                {{-- <div class="col-12 text-left">
                 <a href="data.html#"><i class="ion ion-person"></i> My Profile</a>
-                </div>
+                </div> --}}
                 
             <div role="separator" class="divider col-12"></div>
                 <div class="col-12 text-left">

@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,6 +17,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+
+        //share notificationCount with all views
+        $notificationCount = DB::table('notifications')
+        ->whereNull('read_at')
+        ->count();
+        View::share('notificationCount', $notificationCount);
     }
 
     /**

@@ -14,8 +14,8 @@
         Patient Registration
       </h1>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><i class="fa fa-dashboard"></i> Dashbaord</a></li>
-        <li class="breadcrumb-item">Patients</li>
+        <li class="breadcrumb-item"><i class="fa fa-dashboard"></i><a href="{{ route('dashbaord') }}">Dashbaord</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('patients.index') }}">Patients</a></li>
         <li class="breadcrumb-item active">Register</li>
       </ol>
       <div id="widgethere"></div>

@@ -38,3 +38,4 @@ Route::get('/relatedfiles/{patient}', 'RelatedfileController@show')->name('relat
 Route::get('/relatedfile/{relatedfile}/edit', 'RelatedfileController@edit')->name('relatedfile.edit');
 Route::patch('/relatedfile/{relatedfile}', 'RelatedfileController@update')->name("relatedfile.update");
 Route::delete('/relaltedfile/{relatedfile}', 'RelatedfileController@destroy')->name('relatedfile.destroy');
+Route::get('/notifications/markasread', 'MarkasReadNotificationController')->name('notification.markasread');

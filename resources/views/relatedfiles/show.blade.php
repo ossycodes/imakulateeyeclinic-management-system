@@ -35,15 +35,18 @@
                     </div>
                     <!-- /.box-body -->
                     </div>
-                    <div class="timeline-footer text-right">
-                            <a href="{{ route('relatedfile.edit', ['relatedfile' => $file->id]) }}" class="btn btn-primary btn-sm">Edit</a>
-                            <br><br>
-                            <form action="{{ route('relatedfile.destroy', ['relatedfile' => $file->id]) }}" method="POST">@csrf
-                                @method('DELETE')
-                                <input type="submit" class="btn btn-danger btn-sm" value="Delete"/>
-                            </form>
-                    </div>
                     <!-- /.box -->
+                        <div class="timeline-footer text-right">
+                                <a class="btn btn-app bg-blue" href="{{ route('relatedfile.edit', ['relatedfile' => $file->id]) }}">
+                                    <i class="fa fa-edit"></i> Edit
+                                </a>
+                                      
+                                <form action="{{ route('relatedfile.destroy', ['relatedfile' => $file->id]) }}" method="POST">@csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-app bg-green">  <i class="fa fa-stop"></i> Delete </button>
+                                    {{-- <input type="submit" class="btn btn-danger btn-sm" value="Delete"/> --}}
+                                </form>
+                        </div>
                 </div>
              @empty 
                     <h1>

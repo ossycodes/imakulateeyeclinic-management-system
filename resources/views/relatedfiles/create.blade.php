@@ -8,12 +8,13 @@
   
   <!-- Content Header (Page header) -->
   <section class="content-header">
+    @include('layouts.includes.errormessages')
     <h1>
-      Editors
+      Create Related File For Patient
     </h1>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="editors.html#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li class="breadcrumb-item"><a href="editors.html#">related files</a></li>
+      <li class="breadcrumb-item"><a href="{{ route('dashbaord') }}"><i class="fa fa-dashboard"></i> Dashbaord </a></li>
+      <li class="breadcrumb-item"><a href="{{ route('relatedfiles') }}">related files</a></li>
       <li class="breadcrumb-item active">create</li>
     </ol>
   </section>
@@ -25,8 +26,7 @@
 
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title">Bootstrap WYSIHTML5<br>
-              <small>Bootstrap html5 editor</small>
+            <h3 class="box-title">Create Related File For Patient<br>
             </h3>
             <!-- tools box -->
             <div class="pull-right box-tools">
@@ -43,7 +43,7 @@
           <div class="box-body">
             <form action="{{ route('relatedfile.store', ['patient' => $patient]) }}" method="POST"> @csrf
               <textarea class="textarea" id="editor1" name="record"  placeholder="Place some text here"
-                        style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
+                        style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required>
                 </textarea>
                 <button type="submit" class="btn btn-app bg-blue">
                   <i class="fa fa-save"></i> Save
@@ -60,6 +60,5 @@
     <!-- ./row -->
   </section>
   <!-- /.content -->
-
    
 @endsection
