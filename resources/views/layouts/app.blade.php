@@ -27,6 +27,9 @@
 
 	<!-- Minimalelite Admin skins -->
 	<link rel="stylesheet" href="{{ asset('css/skins/_all-skins.css') }}">
+	
+
+	<link rel="stylesheet" href="{{ asset('assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css') }}">
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -92,7 +95,15 @@
 	<script src="{{ asset('js/demo.js') }}"></script>
 	
 	<!-- Minimalelite Admin for Data Table -->
-    <script src="{{ asset('js/pages/data-table.js') }}"></script>
+	<script src="{{ asset('js/pages/data-table.js') }}"></script>
+
+	<!-- CK Editor -->
+	<script src="{{ asset('assets/vendor_components/ckeditor/ckeditor.js') }}"></script>
+	
+	<!-- Bootstrap WYSIHTML5 -->
+	<script src="{{ asset('assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js') }}"></script>
+	<!-- Minimalelite Admin for editor -->
+	<script src="{{ asset('js/pages/editor.js') }}"></script>
     
     @stack('scripts')
 	

@@ -16,10 +16,11 @@ Route::get('/', function () {
 });
 
 
+Route::redirect('/', '/login');
 Route::get('/login', 'Auth\LoginController@showLoginForm');
 Route::post('/login', 'Auth\LoginController@login')->name('login');
 Route::match(['GET', 'POST'], '/logout', 'Auth\LoginController@logout')->name('logout');
-Route::get('/dashboard', 'DashboardController@index');
+Route::get('/dashboard', 'DashboardController@index')->name('dashbaord');
 Route::get('/patients/create', 'PatientController@create')->name('patients.create');
 Route::get('/patients/{patient}/edit', 'PatientController@edit')->name('patient.edit');
 Route::get('/patients', 'PatientController@index')->name('patients.index');
@@ -29,3 +30,11 @@ Route::get('/patients/celebrants', 'CelebrantController@index')->name('celebrant
 Route::delete('/patients/{patient}', 'PatientController@destroy')->name('patient.destroy');
 Route::get('/change-password', 'ChangePasswordController@index')->name('changepassword');
 Route::patch('/change-password', 'ChangePasswordController@update')->name('password.update');
+Route::get('profile', 'ProfileController@index')->name('profile');
+Route::get('/patients/{patient}/relatedfiles/create', 'RelatedfileController@create')->name('relatedfile.create');
+Route::get('/relatedfiles', 'RelatedfileController@index')->name('relatedfiles');
+Route::post('/patients/{patient}/relatedfiles', 'RelatedfileController@store')->name('relatedfile.store');
+Route::get('/relatedfiles/{patient}', 'RelatedfileController@show')->name('relatedfile.show');
+Route::get('/relatedfile/{relatedfile}/edit', 'RelatedfileController@edit')->name('relatedfile.edit');
+Route::patch('/relatedfile/{relatedfile}', 'RelatedfileController@update')->name("relatedfile.update");
+Route::delete('/relaltedfile/{relatedfile}', 'RelatedfileController@destroy')->name('relatedfile.destroy');

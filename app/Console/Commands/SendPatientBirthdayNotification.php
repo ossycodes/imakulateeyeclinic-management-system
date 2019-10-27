@@ -42,9 +42,9 @@ class SendPatientBirthdayNotification extends Command
      */
     public function handle()
     {
-        $user = User::find(2);
+        $user = User::where("email", "imakulateeyeclinic@gmail.com")->first();
         $filtered = Patient::all()->filter(function ($value, $key) {
-            return $value->dateofbirth === date('d-m-Y');
+            return $value->dateofbirth === date('Y-m-d');
         });
         $patients = $filtered->all();
         $user->notify(new HappyBirthday($patients));

@@ -62,7 +62,8 @@ class HappyBirthday extends Notification
         ];
     }
 
-    public function patientsWhoseBirthdayAreTodayString() {
+    public function patientsWhoseBirthdayAreTodayString()
+    {
         $patientsWhoseBirthdayAreTodayArray = [];
         foreach ($this->patients as $p) {
             array_push($patientsWhoseBirthdayAreTodayArray, $p->fullname);
