@@ -27,14 +27,13 @@
         <!-- Notifications -->
         <li class="dropdown notifications-menu">
         <a href="data.html#" class="dropdown-toggle" data-toggle="dropdown">
-            {{-- @if($notificationCount) --}}
             <i class="mdi mdi-bell"></i>
-            {{-- @endif --}}
         </a>
         <ul class="dropdown-menu scale-up">
             <li class="header">You have @php echo count(auth()->user()->unreadNotifications) @endphp notifications</li>
             <li>
             <!-- inner menu: contains the actual data -->
+            @if($notificationCount)
             <ul class="menu inner-content-div">
                     @foreach (auth()->user()->unreadNotifications  as $notification)
                         <li>
@@ -44,6 +43,7 @@
                         </li>
                     @endforeach
             </ul>
+            @endif
             </li>
             @if($notificationCount)
                 <li class="footer"><a href="{{ route('notification.markasread') }}">Mark as read</a></li>

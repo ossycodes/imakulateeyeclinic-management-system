@@ -39,3 +39,5 @@ Route::get('/relatedfile/{relatedfile}/edit', 'RelatedfileController@edit')->nam
 Route::patch('/relatedfile/{relatedfile}', 'RelatedfileController@update')->name("relatedfile.update");
 Route::delete('/relaltedfile/{relatedfile}', 'RelatedfileController@destroy')->name('relatedfile.destroy');
 Route::get('/notifications/markasread', 'MarkasReadNotificationController')->name('notification.markasread');
+Route::get('/casefile/{patient}/create', 'CasefileController@create')->name('casefile.create');
+Route::get('/casefiles', 'CasefileController@index')->name('casefile');

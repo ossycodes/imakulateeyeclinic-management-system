@@ -14,11 +14,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Registered Patients
+        View and Create Case File For Patients
       </h1>
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('dashbaord') }}"> <i class="fa fa-dashboard"> </i> dashboard </a></li>
-        <li class="breadcrumb-item active">Registered</li>
+        <li class="breadcrumb-item"><a href="data.html#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="breadcrumb-item"><a href="data.html#">Patients</a></li>
+        <li class="breadcrumb-item active">view/create case files</li>
       </ol>
     </section>
 
@@ -31,7 +32,7 @@
          
          <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Registered Patients</h3>
+              <h3 class="box-title">Create and View Patient Case File</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -40,15 +41,9 @@
 					<thead>
 						<tr>
 							<th>Clinic Card Number</th>
-							<th>Full Name</th>
-							<th>Parent Name</th>
-							<th>Address</th>
-							<th>Occupation</th>
-							<th>Phone Number</th>
-							<th>Alternative Phone Number</th>
-							<th>Next Of Kin Name</th>
-							<th>Date of Birth</th>
-							<th>Action</th>
+							<th>Patient Full Name</th>
+                            <th>Create Case File</th>
+                            <th>View Case File</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -56,40 +51,21 @@
 						<tr>
 							<td>{{ $patient->cliniccardnumber }}</td>
 							<td>{{ $patient->fullname }}</td>
-							<td>{{ $patient->parentname }}</td>
-							<td>{{ $patient->address }}</td>
-							<td>{{ $patient->occupation }}</td>
-							<td>{{ $patient->phonenumber }}</td>
-							<td>{{ $patient->alternativephonenumber ?? 'Not provided' }}</td>
-							<td>{{ $patient->nextofkin }}</td>
-							<td>{{ $patient->dateofbirth }}</td>
 							<td>
-								<a href="{{ route('patient.edit', ['patient' => $patient]) }}"class="btn btn-app bg-blue">
-									<i class="fa fa-edit"></i> Edit
-								</a>
-								<form action="{{ route('patient.destroy', ['patient' => $patient]) }}" method="post">@csrf
-									@method('DELETE')
-									<i class="fa fa-trash-o">
-										<input type="submit" class="btn btn-danger" value="Delete">
-									</i>
-								</form>
-								
+							    <a href="{{ route('casefile.create', ['patient' => $patient]) }}"><button type="button" class="btn btn-primary"><i class="fa fa-envelope"></i> Create Case File </button></a>
 							</td>
+                            <td>
+                                <a href="{{ route('relatedfile.show', ['patient' => $patient]) }}"><button type="button" class="btn btn-success"><i class="fa fa-envelope"></i> View Case File </button></a>
+                            </td>
 						</tr>
 						@endforeach
 					</tbody>
 					<tfoot>
 						<tr>
 							<th>Clinic Card Number</th>
-							<th>Full Name</th>
-							<th>Parent Name</th>
-							<th>Address</th>
-							<th>Occupation</th>
-							<th>Phone Number</th>
-							<th>Alternative Phone Number</th>
-							<th>Next Of Kin Name</th>
-							<th>Date of Birth</th>
-							<th>Action</th>
+							<th>Patient Full Name</th>
+                            <th>Create Case File</th>
+                            <th>View Case File</th>
 						</tr>
 					</tfoot>
 				  </table>
@@ -112,6 +88,10 @@
 		<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 		<script>
 	  	$.widget.bridge('uibutton', $.ui.button);
+		  var del = document.getElementById('del');
+		  del.addEventListener('click', function(e) {
+		  	alert(del.value);
+		  });
 		</script>
 	@endpush
 

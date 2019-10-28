@@ -63,8 +63,7 @@
 
     @push('scripts')
         <!-- Form validator JavaScript -->
-        <script src="{{ asset('js/pages/validation.js') }}"></script>\
-        Sweet-Alert  -->
+        <script src="{{ asset('js/pages/validation.js') }}"></script>
         <script src="{{ asset('assets/vendor_components/sweetalert/sweetalert.min.js') }}"></script>
         <script>
         ! function(window, document, $) {

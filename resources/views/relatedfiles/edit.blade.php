@@ -9,12 +9,12 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Editors
+      Edit Patient Record
     </h1>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="editors.html#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li class="breadcrumb-item"><a href="editors.html#">related files</a></li>
-      <li class="breadcrumb-item active">create</li>
+      <li class="breadcrumb-item"><a href="{{ route('dashbaord') }}"><i class="fa fa-dashboard"></i> dashboard </a></li>
+      <li class="breadcrumb-item active">patient record</li>
+      <li class="breadcrumb-item active">edit</li>
     </ol>
   </section>
 

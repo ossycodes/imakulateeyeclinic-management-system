@@ -10,7 +10,22 @@ class Patient extends Model
 
     public function getRouteKeyName()
     {
-        return 'fullname';
+        return 'slug';
+    }
+
+    //this is always called once the model is loaded
+    public static function boot()
+    {
+        //listen to when the creating event is fired and then
+        //create a slug for the patient from the fullname. 
+        static::creating(function ($patient) {
+            $patient->slug = str_slug($patient->fullname);
+        });
+    }
+
+    public function casefiles()
+    {
+        return $this->hasMany(Casefile::class);
     }
 
     public function relatedfiles()

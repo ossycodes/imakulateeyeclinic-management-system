@@ -26,13 +26,13 @@
 				  <div class="box-body">
 					<div class="flexbox mb-1">
 					  <div>
-						<p class="text-success font-size-26 font-weight-300 mb-0">452</p>
-						Patients
+						<p class="text-success font-size-26 font-weight-300 mb-0">{{ $patientCount }}</p>
+						{{ str_plural('Patient', $patientCount) }}
 					  </div>
-					  <div class="text-success font-size-40"><i class="mdi mdi-account-plus"></i></div>
+					  <div class="text-success font-size-40"><i class="mdi mdi-account"></i></div>
 					</div>
 					<div class="progress progress-xxs mt-10 mb-0">
-					  <div class="progress-bar bg-success" role="progressbar" style="width: 35%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+					  {{-- <div class="progress-bar bg-success" role="progressbar" style="width: 35%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div> --}}
 					</div>
 				  </div>
 			  </div>
@@ -47,14 +47,32 @@
 						<p class="text-danger font-size-26 font-weight-300 mb-0"><a href="{{ route('celebrants') }}">{{ $celebrantCount }}</a></p>
 						<a href="{{ route('celebrants') }}">{{ str_plural('Patient', $celebrantCount) }} Have Birthday Today</a>
 					  </div>
-					  <div class="text-danger font-size-40"><i class="mdi mdi-heart"></i></div>
+					  <div class="text-danger font-size-40"><i class="mdi mdi-cake"></i></div>
 					</div>
 					<div class="progress progress-xxs mt-10 mb-0">
-					  <div class="progress-bar bg-danger" role="progressbar" style="width: 35%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+					  {{-- <div class="progress-bar bg-danger" role="progressbar" style="width: 35%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div> --}}
 					</div>
 				  </div>
 			  </div>
-            </div>
+			</div>
+			
+			<div class="col-md-6 col-lg-3 col-xlg-3">
+				<div class="box box-inverse box-info pull-up">
+					<div class="box-body text-center">
+						<h1 class="font-light text-white">2,064</h1>
+						<h6 class="text-white mb-10"> Case Files </h6>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 col-lg-3 col-xlg-3">
+				<div class="box box-success box-inverse pull-up">
+					<div class="box-body text-center">
+						<h1 class="font-light text-white">{{ $relatedfilesCount }}</h1>
+						<h6 class="text-white mb-10"> Related Files </h6>
+					</div>
+				</div>
+			</div>
             
 		  </div>
         </div>

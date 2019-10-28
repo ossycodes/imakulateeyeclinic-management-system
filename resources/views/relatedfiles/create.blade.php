@@ -7,8 +7,8 @@
 
   
   <!-- Content Header (Page header) -->
+  @include('layouts.includes.errormessages')
   <section class="content-header">
-    @include('layouts.includes.errormessages')
     <h1>
       Create Related File For Patient
     </h1>
