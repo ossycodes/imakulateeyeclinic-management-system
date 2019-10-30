@@ -5,6 +5,12 @@
 
 @section('content')
 
+
+@push('stylesheet')
+  <!-- Bootstrap time Picker -->
+	<link rel="stylesheet" href="{{ asset('assets/vendor_plugins/timepicker/bootstrap-timepicker.min.css') }}">
+@endpush
+
   
   <!-- Content Header (Page header) -->
   @include('layouts.includes.errormessages')

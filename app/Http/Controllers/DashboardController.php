@@ -2,12 +2,6 @@
 
 namespace App\Http\Controllers;
 
-<form action="{{ route('relatedfile.destroy', ['relatedfile' => $file->id]) }}" method="POST">@csrf
-@method('DELETE')
-<button type="submit" class="btn btn-app bg-green">  <i class="fa fa-stop"></i> Delete </button>
-{{-- <input type="submit" class="btn btn-danger btn-sm" value="Delete"/> --}}
-</form>
-
 use App\Patient;
 use App\Relatedfile;
 use Illuminate\Http\Request;

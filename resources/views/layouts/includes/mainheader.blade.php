@@ -30,17 +30,16 @@
             <i class="mdi mdi-bell"></i>
         </a>
         <ul class="dropdown-menu scale-up">
-            <li class="header">You have @php echo count(auth()->user()->unreadNotifications) @endphp notifications</li>
+            <li class="header">You have @php $count = count(auth()->user()->unreadNotifications);  echo $count; @endphp {{ str_plural('notification', $count) }}</li>
             <li>
             <!-- inner menu: contains the actual data -->
             @if($notificationCount)
             <ul class="menu inner-content-div">
                     @foreach (auth()->user()->unreadNotifications  as $notification)
-                        <li>
-                            <a href="data.html#">
+                            <p><a href="{{ route('celebrants') }}"><b>{{ $notification->data['patients_fullname'] }} have birthday today!</b></a></p>
+                            {{-- <a href="data.html#">
                                 <i class="fa fa-users text-aqua"></i> Patient birthday today: {{ $notification->data['patients_fullname'] }}
-                            </a>
-                        </li>
+                            </a> --}}
                     @endforeach
             </ul>
             @endif
@@ -58,8 +57,9 @@
         </a>
         <ul class="dropdown-menu scale-up">
             <!-- User image -->
-            <li class="user-header">
-            <img src="../../../images/user5-1.jpg" class="float-left rounded-circle" alt="User Image">
+            <li class="user-body">
+            {{-- <p>
+            <img src="../../../images/user5-1.jpg" class="float-left rounded-circle" alt="User Image"> --}}
             @if(auth()->check())
                 <p>
                     {{ auth()->user()->name }}
@@ -80,7 +80,6 @@
                 </div>
             <div role="separator" class="divider col-12"></div>
                 <div class="col-12 text-left">
-                    
                   <a href="{{ route('logout') }}"><i class="fa fa-power-off"></i> Logout</a>
                 </div>				
             </div>

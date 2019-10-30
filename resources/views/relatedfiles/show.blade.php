@@ -33,7 +33,7 @@
                                 <a href="{{ route('relatedfile.edit', ['relatedfile' => $file->id]) }}"class="btn btn-app bg-blue">
                                         <i class="fa fa-edit"></i> Edit
                                     </a>
-                          <form action="" method="POST">@csrf
+                          <form action="{{ route('relatedfile.destroy', ['relatedfile' => $file->id]) }}" method="POST">@csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-app bg-green">  <i class="fa fa-stop"></i> Delete </button>
                          </form>

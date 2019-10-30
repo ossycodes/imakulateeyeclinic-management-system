@@ -53,11 +53,14 @@ $(".validation-wizard").steps({
 
     var token = document.querySelector('[name="csrf-token"]').content;
     var xhr = new XMLHttpRequest();
+    var jsonData;
 
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {
-        var jsonData = Json.parse(xhr.responseText);
-      }
+        jsonData = JSON.parse(xhr.responseText);
+        swal("Patient Registered Successfully!");
+        location.href = `/casefile/${jsonData.patientSlug}/create`;
+       }
     };
 
     xhr.onprogress = function() {
@@ -91,8 +94,8 @@ $(".validation-wizard").steps({
       `fullname=${fullname}&parentname=${parentname}&address=${address}&occupation=${occupation}&phonenumber=${phonenumber}&alternativephonenumber=${alternativePhonenumber}&nextofkin=${nextOfKin}&dateofbirth=${dateOfBirth}&cliniccardnumber=${cliniccardnumber}`
     );
 
-    swal("Patient Registered Successfully!");
-    location.href = "/patients";
+    // swal("Patient Registered Successfully!");
+    // location.href = `/casefile/${jsonData.patientSlug}/create`;
   }
 }),
   $(".validation-wizard").validate({

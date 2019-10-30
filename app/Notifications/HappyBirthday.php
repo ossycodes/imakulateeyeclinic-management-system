@@ -43,7 +43,7 @@ class HappyBirthday extends Notification
     {
         $celebrants = $this->patientsWhoseBirthdayAreTodayString();
         return (new MailMessage)
-            ->line("Today is {$celebrants} birthday");
+            ->line("{$celebrants} have birthday today!");
         // ->action('Notification Action', url('/'))
         // ->line('Thank you for using our application!');
     }

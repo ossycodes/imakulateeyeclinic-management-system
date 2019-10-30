@@ -67,12 +67,10 @@
 								<a href="{{ route('patient.edit', ['patient' => $patient]) }}"class="btn btn-app bg-blue">
 									<i class="fa fa-edit"></i> Edit
 								</a>
-								<form action="{{ route('patient.destroy', ['patient' => $patient]) }}" method="post">@csrf
-									@method('DELETE')
-									<i class="fa fa-trash-o">
-										<input type="submit" class="btn btn-danger" value="Delete">
-									</i>
-								</form>
+								<form action="{{ route('patient.destroy', ['patient' => $patient]) }}" method="POST">@csrf
+										@method('DELETE')
+										<button type="submit" class="btn btn-app bg-green">  <i class="fa fa-stop"></i> Delete </button>
+								 </form>
 								
 							</td>
 						</tr>
