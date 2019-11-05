@@ -81,28 +81,124 @@
                         </div>
 
                         <div class="form-group">
-                            <label>PRESENT Rx</label>
+                            <label>UNAIDED VISUAL ACUITY @6M </label>
                             <br>
                             <label>O.D</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected">Sphere</option>
-                                <option>Cylinder</option>
-                                <option>Axis</option>
-                                <option>Prism</option>
-                                <option>Add</option>
-                            </select>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
                             <br>
                             <label>O.S</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected">Sphere</option>
-                                <option>Cylinder</option>
-                                <option>Axis</option>
-                                <option>Prism</option>
-                                <option>Add</option>
-                            </select>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>UNAIDED VISUAL ACUITY @0.4M </label>
+                            <br>
+                            <label>O.D</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                            <br>
+                            <label>O.S</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>      
+
+                        <div class="form-group">
+                            <label> PINHOLE TEST </label>
+                            <br>
+                            <label>O.D</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                            <br>
+                            <label>O.S</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>  
+
+                        <div class="form-group">
+                            <label> STENOPAIC DISC </label>
+                            <br>
+                            <label>O.D</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                            <br>
+                            <label>O.S</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div> 
+                        
+                        <div class="form-group">
+                            <label>AIDED VISUAL ACUITY @6M </label>
+                            <br>
+                            <label>O.D</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                            <br>
+                            <label>O.S</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>  
+
+                        <div class="form-group">
+                            <label>AIDED VISUAL ACUITY @0.4M </label>
+                            <br>
+                            <label>O.D</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                            <br>
+                            <label>O.S</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>  
+
+                        <div class="form-group">
+                            <label>PRESENT PRESCRIPTION</label>
+                            <br>
+                            <label>O.D</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                            <br>
+                            <label>O.S</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
                         </div>
 
                         <h5>EXTERNAL EXAMINATION <span class="text-danger">*</span></h5>
+                        <div class="box">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <textarea class="textarea" id="editor1" name="record"  placeholder="Place some text here"
+                                        style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required>
+                                </textarea>
+                            </div>
+                        </div>
+
+                        <h5>UNAIDED VISUAL ACUITY @6M <span class="text-danger">*</span></h5>
+                        <div class="box">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <textarea class="textarea" id="editor1" name="record"  placeholder="Place some text here"
+                                        style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required>
+                                </textarea>
+                            </div>
+                        </div>
+
+                        <h5>UNAIDED EXAMINATION <span class="text-danger">*</span></h5>
                         <div class="box">
                             <!-- /.box-header -->
                             <div class="box-body">
@@ -121,6 +217,7 @@
                                 </textarea>
                             </div>
                         </div>
+
 
                         <div class="form-group">
                             <h5>Preferred eye<span class="text-danger">*</span></h5>
@@ -159,10 +256,16 @@
 
                         <div class="form-group">
                             <label>TONOMETRY</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected">OD</option>
-                                <option>OS</option>
-                            </select>
+                            <br>
+                            <label>O.D</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                            <br>
+                            <label>O.S</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
                         </div>
 
                         <div class="form-group">
@@ -172,181 +275,169 @@
                             <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
                         </div>
 
-                            <div class="form-group">
-                                <h5> Anaesthetics <span class="text-danger">*</span></h5>
-                                <div class="controls">
-                                    <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
-                                <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
-                            </div>
+                        <div class="form-group">
+                            <h5> Anaesthetics <span class="text-danger">*</span></h5>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>
 
-                            <div class="form-group">
-                                <label>REFRACTION</label>
-                                <br>
-                                <label>OD</label>
-                                <select class="form-control select2" style="width: 100%;">
-                                    <option selected="selected">Autorefractometry</option>
-                                    <option>STALIC REFIMESCOPY</option>
-                                </select>
-                                <br>
-                                <label>O.S</label>
-                                <select class="form-control select2" style="width: 100%;">
-                                    <option selected="selected">Autorefractometry</option>
-                                    <option>STALIC REFIMESCOPY</option>
-                                </select>
-                            </div>
+                        <div class="form-group">
+                            <label>AUTOREFRACTOMETRY</label>
+                            <br>
+                            <label>O.D</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                            <br>
+                            <label>O.S</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>      
+                        
+                        <div class="form-group">
+                            <label>STATIC RETINOSCOPY</label>
+                            <br>
+                            <label>O.D</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                            <br>
+                            <label>O.S</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>
 
-                            <div class="form-group">
-                                <h5> SUBJECTIVE <span class="text-danger">*</span></h5>
-                                <div class="controls">
-                                    <input type="text" name="text" class="form-control" placeholder="OD________VA______" required data-validation-required-message="This field is required"> </div>
-                                <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
-                                <br>
-                                <div class="controls">
-                                    <input type="text" name="text" class="form-control" placeholder="O.S________VA______"  required data-validation-required-message="This field is required"> </div>
-                                <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
-                                <br>
-                                <div class="controls">
-                                    <input type="text" name="text" class="form-control" placeholder="ADD________VA______"  required data-validation-required-message="This field is required"> </div>
-                                <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
-                            </div>
+                        <div class="form-group">
+                            <h5> SUBJECTIVE <span class="text-danger">*</span></h5>
+                            <label>O.D</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control"  required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                            <br>
+                            <label>O.S</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control"  required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                            <br>
+                            <label>ADD</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control"  required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>
 
-                            <div class="form-group">
-                                <label>SPECTACLE Rx</label>
-                                <br>
-                                <label>O.D</label>
-                                <select class="form-control select2" style="width: 100%;">
-                                    <option selected="selected">Sphere</option>
-                                    <option>Cylinder</option>
-                                    <option>Axis</option>
-                                    <option>Prism</option>
-                                    <option>Add</option>
-                                    <option>V.A.</option>
-                                </select>
-                                <br>
-                                <label>O.S</label>
-                                <select class="form-control select2" style="width: 100%;">
-                                    <option selected="selected">Sphere</option>
-                                    <option>Cylinder</option>
-                                    <option>Axis</option>
-                                    <option>Prism</option>
-                                    <option>Add</option>
-                                    <option>V.A.</option>
-                                </select>
-                            </div>
+                        <div class="form-group">
+                            <label>SPECTACLE PRESCRIPTION</label>
+                            <br>
+                            <label>O.D</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                            <br>
+                            <label>O.S</label>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>
 
-                            <div class="form-group">
-                                <h5> P D  <span class="text-danger">*</span></h5>
-                                <div class="controls">
-                                    <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
-                                <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
-                            </div>
+                        
+                        <div class="form-group">
+                            <h5> P D  <span class="text-danger">*</span></h5>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>
 
-                            <div class="form-group">
-                                <div class="controls">
-                                    <input type="checkbox" id="checkbox_1" required value="single">
+                        <div class="form-group">
+                            <h5>Recommendation<span class="text-danger">*</span></h5>
+                            <div class="controls">
+
+                                <fieldset>
+                                    <input type="checkbox" id="checkbox_1" required value="a">
                                     <label for="checkbox_1">Dist</label>
-                                </div>								
+                                </fieldset>
+                                <fieldset>
+                                    <input type="checkbox" id="checkbox_2" required value="b">
+                                    <label for="checkbox_2">Near</label>
+                                </fieldset>
+                                <fieldset>
+                                    <input type="checkbox" id="checkbox_3" required value="c">
+                                    <label for="checkbox_3">Bifocal</label>
+                                </fieldset>
+                                <fieldset>
+                                    <input type="checkbox" id="checkbox_4" required value="d">
+                                    <label for="checkbox_4">Vanilux</label>
+                                </fieldset>
+                                <fieldset>
+                                    <input type="checkbox" id="checkbox_5" required value="e">
+                                    <label for="checkbox_5">Types of lens</label>
+                                </fieldset>
+                                <fieldset>
+                                    <input type="checkbox" id="checkbox_6" required value="g">
+                                    <label for="checkbox_6">Thinner lenses</label>
+                                </fieldset>
+                                <fieldset>
+                                    <input type="checkbox" id="checkbox_7" required value="h">
+                                    <label for="checkbox_7">Anti-reflective lenses</label>
+                                </fieldset>
+                                <fieldset>
+                                    <input type="checkbox" id="checkbox_8" required value="i">
+                                    <label for="checkbox_8">Photochronic</label>
+                                </fieldset>
+                                <fieldset>
+                                    <input type="checkbox" id="checkbox_9" required value="j">
+                                    <label for="checkbox_9">Sunglases</label>
+                                </fieldset>
+                              
                             </div>
-                            
-                            <div class="form-group">
-                                <div class="controls">
-                                    <input type="checkbox" id="checkbox_1" required value="single">
-                                    <label for="checkbox_1">Near</label>
-                                </div>								
-                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <h5> Tint <span class="text-danger">*</span></h5>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>
 
-                            <div class="form-group">
-                                <div class="controls">
-                                    <input type="checkbox" id="checkbox_1" required value="single">
-                                    <label for="checkbox_1">Bifocal</label>
-                                </div>								
-                            </div>
-                            
-                            <div class="form-group">
-                                <div class="controls">
-                                    <input type="checkbox" id="checkbox_1" required value="single">
-                                    <label for="checkbox_1">Varius</label>
-                                </div>								
-                            </div>
+                        <div class="form-group">
+                            <h5> Next Appointment <span class="text-danger">*</span></h5>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>
 
-                            <div class="form-group">
-                                <div class="controls">
-                                    <input type="checkbox" id="checkbox_1" required value="single">
-                                    <label for="checkbox_1">Types of lens</label>
-                                </div>								
+                        <h5>ADDITIONAL TESTS, COMMENTS <span class="text-danger">*</span></h5>
+                        <div class="box">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <textarea class="textarea" id="editor1" name="record"  placeholder="Place some text here"
+                                        style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required>
+                                </textarea>
                             </div>
+                        </div>
 
-                            <div class="form-group">
-                                <div class="controls">
-                                    <input type="checkbox" id="checkbox_1" required value="single">
-                                    <label for="checkbox_1">Thinner lenses</label>
-                                </div>								
+                        <h5 >ASSESSMENT PLAN <span class="text-danger">*</span></h5>
+                        <div class="box">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <textarea class="textarea" id="editor1" name="record"  placeholder="Place some text here"
+                                        style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required>
+                                </textarea>
                             </div>
+                        </div>
 
-                            <div class="form-group">
-                                <div class="controls">
-                                    <input type="checkbox" id="checkbox_1" required value="single">
-                                    <label for="checkbox_1">Anit-reflective lenses</label>
-                                </div>								
-                            </div>
+                        <div class="form-group">
+                            <h5> DOCTOR'S NAME <span class="text-danger">*</span></h5>
+                            <div class="controls">
+                                <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>
 
-                            <div class="form-group">
-                                <div class="controls">
-                                    <input type="checkbox" id="checkbox_1" required value="single">
-                                    <label for="checkbox_1">Scratch resistance</label>
-                                </div>								
-                            </div>
-
-                            <div class="form-group">
-                                <div class="controls">
-                                    <input type="checkbox" id="checkbox_1" required value="single">
-                                    <label for="checkbox_1">Photochronic</label>
-                                </div>								
-                            </div>
-
-                            <div class="form-group">
-                                <div class="controls">
-                                    <input type="checkbox" id="checkbox_1" required value="single">
-                                    <label for="checkbox_1">Sunglasses</label>
-                                </div>								
-                            </div>
-
-                            <div class="form-group">
-                                <h5> Tint <span class="text-danger">*</span></h5>
-                                <div class="controls">
-                                    <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
-                                <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
-                            </div>
-
-                            <div class="form-group">
-                                <h5> Next Appointment <span class="text-danger">*</span></h5>
-                                <div class="controls">
-                                    <input type="text" name="text" class="form-control" required data-validation-required-message="This field is required"> </div>
-                                <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
-                            </div>
-
-                            <h5>ADDITIONAL TESTS, COMMENTS <span class="text-danger">*</span></h5>
-                            <div class="box">
-                                <!-- /.box-header -->
-                                <div class="box-body">
-                                    <textarea class="textarea" id="editor1" name="record"  placeholder="Place some text here"
-                                            style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required>
-                                    </textarea>
-                                </div>
-                            </div>
-
-                            <h5 >ASSESSMENT PLAN <span class="text-danger">*</span></h5>
-                            <div class="box">
-                                <!-- /.box-header -->
-                                <div class="box-body">
-                                    <textarea class="textarea" id="editor1" name="record"  placeholder="Place some text here"
-                                            style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required>
-                                    </textarea>
-                                </div>
-                            </div>
-                            <div class="text-xs-right">
-                                <button type="submit" class="btn btn-info">Submit</button>
-                            </div>
+                        <div class="text-xs-right">
+                            <button type="submit" class="btn btn-info">CREATE</button>
+                        </div>
                     </form>
                     
                 </div>
