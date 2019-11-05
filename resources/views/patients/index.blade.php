@@ -31,7 +31,7 @@
          
          <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Registered Patients</h3>
+              <h3 class="box-title">List Of Registered Patients</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">

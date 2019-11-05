@@ -13,6 +13,21 @@ class Patient extends Model
         return 'slug';
     }
 
+    /**
+     * Get the patient's date of birth.
+     *
+     * @param  string  $value
+     * @return string
+     */
+    public function getDateofbirthAttribute($value)
+    {
+        $dm = explode('-', $value);
+        $month = $dm[1];
+        $day = $dm[2];
+        $format = '%s-%s';
+        return sprintf($format, $month, $day);  
+    }
+
     //this is always called once the model is loaded
     public static function boot()
     {

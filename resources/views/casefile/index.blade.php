@@ -32,7 +32,7 @@
          
          <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Create and View Patient Case File</h3>
+              <h3 class="box-title">Patients Case File</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
