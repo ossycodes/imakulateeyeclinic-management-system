@@ -15,7 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::redirect('/', '/login');
 Route::get('/login', 'Auth\LoginController@showLoginForm');
 Route::post('/login', 'Auth\LoginController@login')->name('login');
@@ -41,3 +40,7 @@ Route::delete('/relaltedfile/{relatedfile}', 'RelatedfileController@destroy')->n
 Route::get('/notifications/markasread', 'MarkasReadNotificationController')->name('notification.markasread');
 Route::get('/casefile/{patient}/create', 'CasefileController@create')->name('casefile.create');
 Route::get('/casefiles', 'CasefileController@index')->name('casefile');
+Route::post('/casefiles', 'CasefileController@store')->name('casefile.store');
+Route::get('/casefiles/{casefile}/{patient}/edit', 'CasefileController@edit')->name('casefile.edit');
+Route::get('/casefiles/{casefile}/{patient}', 'CasefileController@show')->name('casefile.show');
+Route::patch('/casefiles/{casefile}/{patient}', 'CasefileController@update')->name('casefile.update');

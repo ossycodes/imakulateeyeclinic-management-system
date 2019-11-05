@@ -38,9 +38,9 @@ class Patient extends Model
         });
     }
 
-    public function casefiles()
+    public function casefile()
     {
-        return $this->hasMany(Casefile::class);
+        return $this->hasOne(Casefile::class);
     }
 
     public function relatedfiles()

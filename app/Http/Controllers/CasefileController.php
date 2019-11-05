@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Casefile;
 use App\Patient;
 use Illuminate\Http\Request;
 
@@ -13,23 +14,30 @@ class CasefileController extends Controller
         return view('casefile.index', compact('patients'));
     }
 
-    public function create()
+    public function create(Patient $patient)
     {
-        return view('casefile.create');
+        return view('casefile.create', compact('patient'));
     }
 
-    public function edit()
+    public function edit(Casefile $casefile, Patient $patient)
     {
-        dd('show case file edit form here');
+        return view('casefile.edit', compact('casefile', 'patient'));
     }
 
-    public function update()
+    public function show(Casefile $casefile, Patient $patient)
     {
-        dd('supdate casefile form here');
+        return view('casefile.show', compact('casefile', 'patient'));
+    }
+
+    public function update(Casefile $casefile, Patient $patient)
+    {
+        $casefile->update(request()->all());
+        return redirect()->route('casefile')->with('success', 'Casefile updated');
     }
 
     public function store()
     {
-        dd('store case file here');
+        Casefile::create(request()->all());
+        return redirect()->route('casefile')->with('success', 'Casefile created');
     }
 }

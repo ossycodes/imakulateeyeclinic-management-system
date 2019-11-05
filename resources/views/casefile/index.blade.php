@@ -55,7 +55,7 @@
 							    <a href="{{ route('casefile.create', ['patient' => $patient]) }}"><button type="button" class="btn btn-primary"><i class="fa fa-envelope"></i> Create Case File </button></a>
 							</td>
                             <td>
-                                <a href="{{ route('relatedfile.show', ['patient' => $patient]) }}"><button type="button" class="btn btn-success"><i class="fa fa-envelope"></i> View Case File </button></a>
+                                <a href="{{ route('casefile.show', ['patient' => $patient, 'casefile' => $patient->casefile]) }}"><button type="button" class="btn btn-success"><i class="fa fa-envelope"></i> View Case File </button></a>
                             </td>
 						</tr>
 						@endforeach
