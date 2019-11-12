@@ -13,6 +13,7 @@ $factory->define(Patient::class, function (Faker $faker) {
         'alternativephonenumber' => '08027332873',
         'nextofkin' => $faker->name,
         'dateofbirth' => date('Y-m-d'),
-        'cliniccardnumber' => $faker->word,
+        'dateofbirthexceptyear' => date('m-d'),
+        'cliniccardnumber' => $faker->randomNumber(),
     ];
 });

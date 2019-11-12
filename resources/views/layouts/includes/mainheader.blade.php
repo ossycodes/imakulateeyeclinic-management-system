@@ -30,9 +30,11 @@
             <i class="mdi mdi-bell"></i>
         </a>
         <ul class="dropdown-menu scale-up">
-            <li class="header">You have @php $count = count(auth()->user()->unreadNotifications);  echo $count; @endphp {{ str_plural('notification', $count) }}</li>
-            <li>
-            <!-- inner menu: contains the actual data -->
+            @if(auth()->user()->unreadNotifications)    
+                <li class="header">You have @php $count = count(auth()->user()->unreadNotifications);  echo $count; @endphp {{ str_plural('notification', $count) }}</li>
+                <li>
+            @endif
+                <!-- inner menu: contains the actual data -->
             @if($notificationCount)
             <ul class="menu inner-content-div">
                     @foreach (auth()->user()->unreadNotifications  as $notification)

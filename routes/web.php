@@ -48,6 +48,6 @@ Route::patch('/casefiles/{casefile}/{patient}', 'CasefileController@update')->na
 
 //back up mysql file and send mail using 
 Route::get('/sql/backup', function () {
-    $exitCode = Artisan::call('mysqlbackupemail:send');
+    //$exitCode = Artisan::call('mysqlbackupemail:send');
     //implement the command that would inturn back mysql database and send me an email of the mysql file
 });
