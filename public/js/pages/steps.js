@@ -50,7 +50,7 @@ $(".validation-wizard").steps({
     var nextOfKin = document.getElementById("wnextofkin").value;
     var dateOfBirth = document.getElementById("wdateofbirth").value;
     var cliniccardnumber = document.getElementById("wcliniccardnumber").value;
-
+    var dateOfBirthExceptYear = document.getElementById("wdateofbirthexceptyear");
     var token = document.querySelector('[name="csrf-token"]').content;
     var xhr = new XMLHttpRequest();
     var jsonData;
@@ -91,7 +91,7 @@ $(".validation-wizard").steps({
     xhr.setRequestHeader("X-CSRF-TOKEN", token);
 
     xhr.send(
-      `fullname=${fullname}&parentname=${parentname}&address=${address}&occupation=${occupation}&phonenumber=${phonenumber}&alternativephonenumber=${alternativePhonenumber}&nextofkin=${nextOfKin}&dateofbirth=${dateOfBirth}&cliniccardnumber=${cliniccardnumber}`
+      `fullname=${fullname}&parentname=${parentname}&address=${address}&occupation=${occupation}&phonenumber=${phonenumber}&alternativephonenumber=${alternativePhonenumber}&nextofkin=${nextOfKin}&dateofbirth=${dateOfBirth}&dateofbirthexceptyear=${dateOfBirthExceptYear}&cliniccardnumber=${cliniccardnumber}`
     );
 
     // swal("Patient Registered Successfully!");

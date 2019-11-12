@@ -24,6 +24,7 @@ class CreatePatientsTable extends Migration
             $table->string("alternativephonenumber")->nullable();
             $table->string('nextofkin')->nullable();
             $table->string('dateofbirth');
+            $table->string('dateofbirthexceptyear');
             $table->string("cliniccardnumber")->unique();
             $table->timestamps();
         });

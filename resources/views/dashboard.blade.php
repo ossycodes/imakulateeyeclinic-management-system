@@ -59,8 +59,8 @@
 			<div class="col-md-6 col-lg-3 col-xlg-3">
 				<div class="box box-inverse box-info pull-up">
 					<div class="box-body text-center">
-						<h1 class="font-light text-white">2,064</h1>
-						<h6 class="text-white mb-10"> Case Files </h6>
+						<h1 class="font-light text-white">{{ $casefilesCount }}</h1>
+						<h6 class="text-white mb-10"> Total Case Files </h6>
 					</div>
 				</div>
 			</div>
@@ -69,7 +69,7 @@
 				<div class="box box-success box-inverse pull-up">
 					<div class="box-body text-center">
 						<h1 class="font-light text-white">{{ $relatedfilesCount }}</h1>
-						<h6 class="text-white mb-10"> Related Files </h6>
+						<h6 class="text-white mb-10">Total  Related Files </h6>
 					</div>
 				</div>
 			</div>

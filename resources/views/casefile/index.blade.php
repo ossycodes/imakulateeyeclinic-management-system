@@ -14,7 +14,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        View and Create Case File For Patients
+        z and Create Case File For Patients
       </h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="data.html#"><i class="fa fa-dashboard"></i> Home</a></li>

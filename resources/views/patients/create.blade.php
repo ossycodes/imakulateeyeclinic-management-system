@@ -89,6 +89,12 @@
                         <input type="date" class="form-control" id="wdateofbirth"> </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="hidden" value="xxxxx" class="form-control required" id="wdateofbirthexceptyear" name="wdateofbirthexceptyear"> </div>
+                    </div>
+                </div>   
                 </section>
                 <!-- Step 2 -->
                 <h6>Step 2</h6>

@@ -12,7 +12,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Edit Case File For {{ $patient->fullname }}
+            Case File For {{ $patient->fullname }}
           </h1>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="form-validation.html#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -443,7 +443,7 @@
                         </div>
 
                         <div class="text-xs-right">
-                            <a href="{{  route('casefile.edit', ['casefile' => $casefile, 'patient' => $patient]) }}"><button class="btn btn-info">UPDATE</button></a>
+                            <a href="{{  route('casefile.edit', ['casefile' => $casefile, 'patient' => $patient]) }}"><button class="btn btn-info">EDIT</button></a>
                         </div>
                     
                 </div>

@@ -44,3 +44,10 @@ Route::post('/casefiles', 'CasefileController@store')->name('casefile.store');
 Route::get('/casefiles/{casefile}/{patient}/edit', 'CasefileController@edit')->name('casefile.edit');
 Route::get('/casefiles/{casefile}/{patient}', 'CasefileController@show')->name('casefile.show');
 Route::patch('/casefiles/{casefile}/{patient}', 'CasefileController@update')->name('casefile.update');
+
+
+//back up mysql file and send mail using 
+Route::get('/sql/backup', function () {
+    $exitCode = Artisan::call('mysqlbackupemail:send');
+    //implement the command that would inturn back mysql database and send me an email of the mysql file
+});

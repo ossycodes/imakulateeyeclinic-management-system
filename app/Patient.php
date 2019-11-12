@@ -14,18 +14,18 @@ class Patient extends Model
     }
 
     /**
-     * Get the patient's date of birth.
+     * Set the user's first name.
      *
      * @param  string  $value
-     * @return string
+     * @return void
      */
-    public function getDateofbirthAttribute($value)
+    public function setDateofbirthexceptyearAttribute()
     {
-        $dm = explode('-', $value);
+        $dm = explode('-', $this->dateofbirth);
         $month = $dm[1];
         $day = $dm[2];
         $format = '%s-%s';
-        return sprintf($format, $month, $day);  
+        $this->attributes['dateofbirthexceptyear'] =  sprintf($format, $month, $day);
     }
 
     //this is always called once the model is loaded
