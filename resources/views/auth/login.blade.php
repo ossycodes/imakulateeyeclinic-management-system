@@ -52,15 +52,15 @@
         </div>
       <div class="row">
         <div class="col-6">
-          <div class="checkbox">
+          {{-- <div class="checkbox">
             <input type="checkbox" id="basic_checkbox_1" >
-			<label for="basic_checkbox_1">Remember Me</label>
-          </div>
+			      <label for="basic_checkbox_1">Remember Me</label>
+          </div> --}}
         </div>
         <!-- /.col -->
         <div class="col-6">
          <div class="fog-pwd">
-          	<a href="javascript:void(0)"><i class="ion ion-locked"></i> Forgot pwd?</a><br>
+          	{{-- <a href="javascript:void(0)"><i class="ion ion-locked"></i> Forgot pwd?</a><br> --}}
           </div>
         </div>
         <!-- /.col -->
@@ -76,6 +76,9 @@
 </div>
 <!-- /.login-box -->
 
+<div align="center">
+  © <?php echo date('Y') ?> Imakulateeyeclinic. All Rights Reserved.
+</div>
 
 	<!-- jQuery 3 -->
 	<script src="{{ asset('assets/vendor_components/jquery/dist/jquery.min.js') }}"></script>

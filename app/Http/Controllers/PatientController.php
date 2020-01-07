@@ -25,7 +25,6 @@ class PatientController extends Controller
 
     public function store(Patient $patient)
     {
-        // dd(request()->all());
         $patient = $patient->register(request()->all());
         return response()->json([
             'patientSlug' => $patient->slug,

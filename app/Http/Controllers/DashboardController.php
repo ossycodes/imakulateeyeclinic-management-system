@@ -6,6 +6,7 @@ use App\Casefile;
 use App\Patient;
 use App\Relatedfile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 class DashboardController extends Controller
 {

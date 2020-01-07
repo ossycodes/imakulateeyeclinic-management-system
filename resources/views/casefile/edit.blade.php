@@ -438,6 +438,13 @@
                         </div>
 
                         <div class="form-group">
+                            <h5> DIAGNOSIS <span class="text-danger">*</span></h5>
+                            <div class="controls">
+                                <input type="text" name="diagnosis" class="form-control" value="{{ $casefile->diagnosis }}"> </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
+                        </div>
+
+                        <div class="form-group">
                             <h5> DOCTOR'S NAME <span class="text-danger">*</span></h5>
                             <div class="controls">
                                 <input type="text"  value="{{ $casefile->doctorsname }}"  name="doctorsname" class="form-control" > </div>

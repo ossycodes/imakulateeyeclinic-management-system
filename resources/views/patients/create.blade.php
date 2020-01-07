@@ -56,8 +56,8 @@
                 <div class="row">
                     <div class="col-md-6">
                     <div class="form-group">
-                        <label for="waddress"> Address : <span class="danger">*</span> </label>
-                        <input type="text" class="form-control required" id="waddress" name="address"> </div>
+                        <label for="waddress"> Address : </label>
+                        <input type="text" class="form-control" id="waddress" name="address"> </div>
                     </div>
                     <div class="col-md-6">
                     <div class="form-group">
@@ -68,8 +68,8 @@
                 <div class="row">
                     <div class="col-md-6">
                     <div class="form-group">
-                        <label for="wphonenumber">Phone Number : <span class="danger">*</span> </label>
-                        <input type="number" class="form-control required" id="wphonenumber"> </div>
+                        <label for="wphonenumber">Phone Number :  </label>
+                        <input type="number" class="form-control" id="wphonenumber"> </div>
                     </div>
                     <div class="col-md-6">
                     <div class="form-group">
@@ -80,13 +80,29 @@
                 <div class="row">
                     <div class="col-md-6">
                     <div class="form-group">
-                        <label for="wnextofkin"> Next Of Kin Name : <span class="danger">*</span> </label>
-                        <input type="text" class="form-control required" id="wnextofkin" name="nextofkin"> </div>
+                        <label for="wnextofkin"> Next Of Kin Name : </label>
+                        <input type="text" class="form-control" id="wnextofkin" name="nextofkin"> </div>
                     </div>
                     <div class="col-md-6">
                     <div class="form-group">
-                        <label for="wdateofbirth">Date of Birth :</label>
+                        <label for="wdateofbirth">Date of Birth : <span class="danger">*</span></label>
                         <input type="date" class="form-control" id="wdateofbirth"> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="wSex"> Sex : </label>
+                        <select class="form-control" id="wsex" name="sex">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="wregDate">Registeration Date :</label>
+                        <input type="date" class="form-control" id="wregdate" name="regdate"> </div>
                     </div>
                 </div>
                 <div class="row">

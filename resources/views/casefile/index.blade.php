@@ -14,7 +14,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        z and Create Case File For Patients
+        View and Create Case File For Patients
       </h1>
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="data.html#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -54,9 +54,15 @@
 							<td>
 							    <a href="{{ route('casefile.create', ['patient' => $patient]) }}"><button type="button" class="btn btn-primary"><i class="fa fa-envelope"></i> Create Case File </button></a>
 							</td>
-                            <td>
-                                <a href="{{ route('casefile.show', ['patient' => $patient, 'casefile' => $patient->casefile]) }}"><button type="button" class="btn btn-success"><i class="fa fa-envelope"></i> View Case File </button></a>
-                            </td>
+							@if($patient->hasCasefile)
+								<td>
+									<a href="{{ route('casefile.show', ['patient' => $patient, 'casefile' => $patient->casefile]) }}"><button type="button" class="btn btn-success"><i class="fa fa-envelope"></i> View Case File </button></a>
+								</td>
+							@else
+								<td>
+									No Case File For Patient
+								</td>
+							@endif
 						</tr>
 						@endforeach
 					</tbody>

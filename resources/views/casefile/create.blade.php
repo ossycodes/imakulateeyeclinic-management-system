@@ -16,9 +16,9 @@
             Create Case File For {{ $patientName }}
           </h1>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="form-validation.html#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="breadcrumb-item"><a href="form-validation.html#">Forms</a></li>
-            <li class="breadcrumb-item active">Form Validation</li>
+            <li class="breadcrumb-item"><a href="form-validation.html#"><i class="fa fa-dashboard"></i> dashbaord</a></li>
+            <li class="breadcrumb-item"><a href="form-validation.html#">casefile</a></li>
+            <li class="breadcrumb-item active">create</li>
           </ol>
         </section>
     
@@ -189,6 +189,16 @@
                             </div>
                         </div>
 
+                        <h5>INTERNAL EXAMINATION <span class="text-danger">*</span></h5>
+                        <div class="box">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <textarea class="textarea" id="editor18" name="ie"  placeholder="Place some text here"
+                                        style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required>
+                                </textarea>
+                            </div>
+                        </div>
+
                         <h5>UNAIDED VISUAL ACUITY @6M <span class="text-danger">*</span></h5>
                         <div class="box">
                             <!-- /.box-header -->
@@ -209,17 +219,7 @@
                             </div>
                         </div>
 
-                        <h5>INTERNAL EXAMINATION <span class="text-danger">*</span></h5>
-                        <div class="box">
-                            <!-- /.box-header -->
-                            <div class="box-body">
-                                <textarea class="textarea" id="editor18" name="ie"  placeholder="Place some text here"
-                                        style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required>
-                                </textarea>
-                            </div>
-                        </div>
-
-
+                        
                         <div class="form-group">
                             <h5>Preferred eye<span class="text-danger">*</span></h5>
                             <div class="controls">
@@ -427,6 +427,13 @@
                                         style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required>
                                 </textarea>
                             </div>
+                        </div>
+
+                        <div class="form-group">
+                            <h5> DIAGNOSIS <span class="text-danger">*</span></h5>
+                            <div class="controls">
+                                <input type="text" name="diagnosis" class="form-control" > </div>
+                            <div class="form-control-feedback"><small>Add <code>required</code> attribute to field for required validation.</small></div>
                         </div>
 
                         <div class="form-group">

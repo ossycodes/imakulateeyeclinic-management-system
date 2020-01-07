@@ -38,6 +38,26 @@ class Patient extends Model
         });
     }
 
+    /**
+     * Get the hascasefile flag for the user.
+     *
+     * @return bool
+     */
+    public function getHasCasefileAttribute()
+    {
+        if ($this->casefile) {
+            return $this->casefile->exists();
+        }
+        return false;
+    }
+
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = ['has_casefile'];
+
     public function casefile()
     {
         return $this->hasOne(Casefile::class);

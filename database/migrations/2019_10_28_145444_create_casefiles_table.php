@@ -56,7 +56,7 @@ class CreateCasefilesTable extends Migration
             $table->string('staticretinoscopyadd')->nullable();
             $table->string('spectacleprescriptionod')->nullable();
             $table->string('spectacleprescriptionos')->nullable();
-            $table->string('pd')->nullable(); 
+            $table->string('pd')->nullable();
             $table->string('dist')->nullable();
             $table->string('near')->nullable();
             $table->string('bifocal')->nullable();
@@ -71,6 +71,7 @@ class CreateCasefilesTable extends Migration
             $table->string('doctorsname')->nullable();
             $table->mediumText('additionaltestsandcomments')->nullable();
             $table->mediumText('assessmentplan')->nullable();
+            $table->string('diagnosis')->nullable();
             $table->timestamps();
 
             $table->foreign('patient_id')->references('id')->on('patients')->onDelete('cascade');

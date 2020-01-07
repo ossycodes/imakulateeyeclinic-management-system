@@ -18,15 +18,10 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         
-        //comment the rest of the line to make test pass
-        //share notificationCount with all views
         $notificationCount = DB::table('notifications')
             ->whereNull('read_at')
             ->count();
-        // View::share('notificationCount', $notificationCount);
-        View::composer('*', function ($view) use ($notificationCount) {
-            $view->with('notificationCount', $notificationCount);
-        });
+        View::share('notificationCount', $notificationCount);
     }
 
     /**
