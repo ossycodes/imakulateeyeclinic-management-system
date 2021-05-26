@@ -17,11 +17,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        
-        $notificationCount = DB::table('notifications')
-            ->whereNull('read_at')
-            ->count();
-        View::share('notificationCount', $notificationCount);
+
+        if (Schema::hasTable('notifications')) {
+            $notificationCount = DB::table('notifications')
+                ->whereNull('read_at')
+                ->count();
+            View::share('notificationCount', $notificationCount);
+        }
     }
 
     /**
