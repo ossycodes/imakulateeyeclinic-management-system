@@ -14,7 +14,7 @@ class CreateCasefilesTable extends Migration
     public function up()
     {
         Schema::create('casefiles', function (Blueprint $table) {
-            $table->increments('id')->nullable();
+            $table->increments('id');
             $table->unsignedInteger('patient_id');
             $table->mediumText('casehistory')->nullable();
             $table->mediumText('systemic')->nullable();
