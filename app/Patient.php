@@ -29,7 +29,7 @@ class Patient extends Model
     }
 
     //this is always called once the model is loaded
-    public static function boot()
+    protected static function booted()
     {
         //listen to when the creating event is fired and then
         //create a slug for the patient from the fullname. 
@@ -37,6 +37,7 @@ class Patient extends Model
             $patient->slug = str_slug($patient->fullname);
         });
     }
+    
 
     /**
      * Get the hascasefile flag for the user.
